@@ -1,6 +1,6 @@
 # InstantMessagingAPP
 
-The objective of this project is to implement an instant messaging (IM) app for Android users. A client/server outline of the app has been shown in the figure below. A snapshot of the user interface on the device has been shown in the second figure.
+The objective of this project is to implement an instant messaging (IM) app for Android users. A client/server outline of the app has been shown in the figure below. 
 
 ## Functions
 * When the app is invoked, it tries to connect with the Server, and many devices can connect to the same Server. As long as the app is running on the device, it tries to connect with the server once every 30 seconds, continually. If it is successful, the Status changes to “Up.” If the network connection toggles between up and down, the app must handle it. If the device is successfully connected to the Server, the Status is Up; otherwise, it is Down.
