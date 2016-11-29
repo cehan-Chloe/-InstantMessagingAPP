@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainPage"
+    android:orientation="horizontal">
+
+    <!--status and groupID part-->
+    <LinearLayout
+        android:id="@+id/statusPart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight = ".6"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="23dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/statusHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="System status: "
+            android:gravity="center"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/groupPart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight = ".6"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/statusPart">
+
+        <TextView
+            android:id="@+id/groupHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Group ID: "
+            android:gravity="center"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/groupID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+    </LinearLayout>
+
+
+    <!-- button part-->
+
+    <LinearLayout
+        android:id="@+id/options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/groupPart"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <Button
+            android:id="@+id/btnShowGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:maxLines="2"
+            android:lines="2"
+            android:text="Show Groups"/>
+        <Space
+            android:layout_width="2dp"
+            android:layout_height="1dp"/>
+
+        <Button
+            android:id="@+id/btnJoinGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:maxLines="2"
+            android:lines="2"
+            android:text="Join Group"/>
+
+        <Space
+            android:layout_width="2dp"
+            android:layout_height="1dp"/>
+
+        <Button
+            android:id="@+id/btnQuitGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:maxLines="2"
+            android:lines="2"
+            android:text="Quit Group"/>
+
+        <Space
+            android:layout_width="2dp"
+            android:layout_height="1dp"/>
+
+        <Button
+            android:id="@+id/btnStartChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="Group member"/>
+
+    </LinearLayout>
+
+
+
+
+
+    <!--send message part-->
+    <LinearLayout
+        android:id="@+id/sendPart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight = ".6"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/id"
+            android:layout_weight = ".8"
+            android:hint="  message..."
+            android:layout_marginTop="10dp"
+            android:gravity="left"/>
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight = ".2"
+            android:text="SEND"/>
+    </LinearLayout>
+
+</RelativeLayout>
+
+

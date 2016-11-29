@@ -16,24 +16,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"/>
 
-    <TextView
-        android:id="@+id/logo2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Please enter your nickname"
-        android:textSize="20dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/logo"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/id"
-        android:hint="enter your nickname here"
+        android:hint="What is your nickname?"
         android:layout_marginTop="46dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/logo2"/>
+        android:layout_below="@+id/logo"/>
 
 
     <Button
