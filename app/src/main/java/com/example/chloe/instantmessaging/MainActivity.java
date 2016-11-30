@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -55,11 +57,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //---------------------------------
-
     Socket socket = null;
-    BufferedReader br = null;
-    BufferedWriter bw = null;
+    DataInputStream br = null;
+    DataOutputStream bw = null;
 
     public void connect() {
         String ipAddress = ip.getText().toString();
@@ -69,22 +69,23 @@ public class MainActivity extends AppCompatActivity {
             protected Void doInBackground(String... params) {
                 try {
                     socket = new Socket(params[0], 12345);
-                    br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                    bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+                    br = new DataInputStream(socket.getInputStream());
+                    bw = new DataOutputStream(socket.getOutputStream());
                     publishProgress("@success");
                 } catch (UnknownHostException e) {
+                    Toast.makeText(MainActivity.this, "cannot connect", Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
-//                    Toast.makeText(MainActivity.this, "cannot connect", Toast.LENGTH_SHORT).show();
                 } catch (IOException e) {
+
+                    Toast.makeText(MainActivity.this, "cannot connect", Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
-//                    Toast.makeText(MainActivity.this, "cannot connect", Toast.LENGTH_SHORT).show();
                 }
 
 
                 try {
                     String line;
-                    if(br != null) {
-                        while ((line = br.readLine()) != null) {
+                    while (true) {
+                        if ((line = br.readLine()) != null) {
                             publishProgress(line);
                         }
                     }
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             if(bw != null) {
                 text.append("me: " + editText.getText().toString() + "\n");
-                bw.write(editText.getText().toString() + "\n");
+                bw.writeUTF(editText.getText().toString() + "\n");
                 bw.flush();
                 editText.setText("");
             }

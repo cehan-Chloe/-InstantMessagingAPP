@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/mainPage"
+    android:id="@+id/chatPage"
     android:orientation="horizontal">
 
     <!--status and groupID part-->
@@ -91,30 +91,6 @@
         android:layout_below="@+id/groupPart"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
-        <Button
-            android:id="@+id/btnShowGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:maxLines="2"
-            android:lines="2"
-            android:text="Show Groups"/>
-        <Space
-            android:layout_width="2dp"
-            android:layout_height="1dp"/>
-
-        <Button
-            android:id="@+id/btnJoinGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:maxLines="2"
-            android:lines="2"
-            android:text="Join Group"/>
-
-        <Space
-            android:layout_width="2dp"
-            android:layout_height="1dp"/>
 
         <Button
             android:id="@+id/btnQuitGroup"

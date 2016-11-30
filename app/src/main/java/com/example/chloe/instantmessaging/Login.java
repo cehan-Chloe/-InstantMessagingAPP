@@ -24,12 +24,27 @@ public class Login extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
+        inputID = (EditText) findViewById(R.id.id);
+
+        findViewById(R.id.buttonSend).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                send();
+            }
+        });
+    }
+
+    public void send() {
+
+    }
+}
+
+
 //        buttonJoin = (Button) findViewById(R.id.btnJoin);
 //        buttonJoin.setOnClickListener(this);
 
         //connect to the server
         //direct to main page
-    }
 
 
 //    @Override
@@ -77,4 +92,4 @@ public class Login extends Activity {
 //    public String getID(){
 //        return String.valueOf(userID);
 //    }
-}
+
