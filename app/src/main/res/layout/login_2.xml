@@ -76,14 +76,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <Button
-            android:id="@+id/btnJoinGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:maxLines="2"
-            android:lines="2"
-            android:text="Join new Group"/>
+
     </LinearLayout>
 
 </RelativeLayout>

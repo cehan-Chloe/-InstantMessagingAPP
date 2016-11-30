@@ -4,17 +4,128 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <EditText
+
+    <!--status and groupID part-->
+    <LinearLayout
+        android:id="@+id/statusPart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ip"
-        android:text = "10.0.2.2"/>
-    <Button
-        android:id="@+id/connect"
+        android:layout_weight = ".6"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="23dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/statusHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="System status: "
+            android:gravity="center"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Down"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/groupPart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="connect"/>
+        android:layout_weight = ".6"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/statusPart">
+
+
+        <TextView
+            android:id="@+id/GroupHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Group ID: "
+            android:gravity="center"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Connected"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+    </LinearLayout>
+
+    <!-- button part-->
+
+    <LinearLayout
+        android:id="@+id/options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/groupPart"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/btnQuitGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:maxLines="2"
+            android:lines="2"
+            android:text="Quit Group"/>
+
+        <Space
+            android:layout_width="2dp"
+            android:layout_height="1dp"/>
+
+        <Button
+            android:id="@+id/btnStartChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="Group member"/>
+
+        <Space
+            android:layout_width="2dp"
+            android:layout_height="1dp"/>
+
+        <Button
+            android:id="@+id/btnJoinGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:maxLines="2"
+            android:lines="2"
+            android:text="Join Group"/>
+
+    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/ll_send_message"
         android:layout_width="match_parent"
@@ -50,17 +161,12 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/options">
 
-        <!--<LinearLayout-->
-        <!--android:id="@+id/linear"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:orientation="vertical" >-->
-        <!--</LinearLayout>-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

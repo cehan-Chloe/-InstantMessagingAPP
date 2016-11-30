@@ -18,10 +18,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Login">
+        <activity android:name=".ChatPage">
 
         </activity>
 
+        <activity android:name=".JoinGroup">
+
+        </activity>
     </application>
 
 
