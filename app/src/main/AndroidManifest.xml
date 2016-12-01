@@ -25,6 +25,10 @@
         <activity android:name=".JoinGroup">
 
         </activity>
+
+        <activity android:name=".ShowGroup">
+
+        </activity>
     </application>
 
 

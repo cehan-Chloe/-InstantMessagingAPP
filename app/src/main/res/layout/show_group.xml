@@ -5,43 +5,6 @@
     android:id="@+id/showGroup"
     android:orientation="horizontal">
 
-    <!--status and groupID part-->
-    <LinearLayout
-        android:id="@+id/statusPart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight = ".6"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginTop="23dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <TextView
-            android:id="@+id/statusHint"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="System status: "
-            android:gravity="center"
-            android:textSize="15dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"/>
-
-        <TextView
-            android:id="@+id/status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:gravity="center"
-            android:textSize="15dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"/>
-
-
-    </LinearLayout>
-
-
-
     <LinearLayout
         android:id="@+id/groupPart"
         android:layout_width="match_parent"
@@ -51,8 +14,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="5dp"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/statusPart">
+        android:layout_alignParentStart="true">
 
         <TextView
             android:id="@+id/groupHint"
@@ -68,18 +30,25 @@
             android:id="@+id/groupID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
+            android:text="cher"
             android:gravity="center"
             android:textSize="15dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true" />
+
 
     </LinearLayout>
 
-
-
-
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/groupPart">
+        <TextView
+            android:text="cher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/showMember"/>
+    </ScrollView>
 </RelativeLayout>
 
 
